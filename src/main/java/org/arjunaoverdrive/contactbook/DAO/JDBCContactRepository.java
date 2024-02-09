@@ -50,7 +50,7 @@ public class JDBCContactRepository implements ContactRepository {
 
     @Override
     public Contact save(Contact contact) {
-        log.debug("Invoking JDBCContactRepository -> save method with contact: {}", contact);
+        log.debug("Invoking JDBCContactRepository -> save method with contact:\n {}", contact);
 
         synchronized (this) {
             Long id = System.currentTimeMillis();
@@ -66,7 +66,7 @@ public class JDBCContactRepository implements ContactRepository {
 
     @Override
     public Contact update(Contact toUpdate) {
-        log.debug("Invoking JDBCContactRepository -> update method with contact: {}", toUpdate);
+        log.debug("Invoking JDBCContactRepository -> update method with contact:\n {}", toUpdate);
 
         String sql = "UPDATE contact SET first_name = ?, last_name = ?, email = ?, phone = ? WHERE id = ?";
         jdbcTemplate.update(sql, toUpdate.getFirstName(), toUpdate.getLastName(), toUpdate.getEmail(), toUpdate.getPhone(),

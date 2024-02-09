@@ -1,6 +1,10 @@
 version: "3"
 
 services:
+  contact-book:
+    image: contact-book:latest
+    ports:
+      - "8080:8080"
   postgres:
     image: postgres:latest
     ports:
