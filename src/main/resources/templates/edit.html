@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit contact</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+    <script src="/js/script.js"></script>
+
+</head>
+<body>
+<div class="main">
+    <div class="container">
+        <div id="edit_contact_form_div" th:insert="~{fragments/form :: contact_form_fragment(${contact})}"></div>
+        <br><br>
+    </div>
+</div>
+</body>
